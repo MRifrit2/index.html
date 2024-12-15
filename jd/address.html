@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Address - JD Sports</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+        }
+
+        header {
+            background-color: #232f3e;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #232f3e;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .trust-badge {
+            width: 50px;
+            margin: 0 10px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #ddd;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .progress-bar span {
+            width: 33%;
+            height: 100%;
+            background-color: #007bff;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="payment.html">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="address-details">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <span></span>
+            </div>
+
+            <h2>Enter Your Address</h2>
+            <p>To complete your order, please provide your address details.</p>
+
+            <form action="submit_address.php" method="POST">
+                <div class="input-group">
+                    <label for="house_number">House Number / Street Address</label>
+                    <input type="text" id="house_number" name="house_number" placeholder="Enter your house number and street address" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="state">State / Region</label>
+                    <input type="text" id="state" name="state" placeholder="Enter your state or region" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="postal_code">Postal / Zip Code</label>
+                    <input type="text" id="postal_code" name="postal_code" placeholder="Enter your postal/zip code" required pattern="\d{5}" title="Postal code should be 5 digits">
+                </div>
+
+                <div class="input-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="Australia">Australia</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+
+                <button type="submit" class="cta-button">Submit Address</button>
+            </form>
+
+            <div class="trust-badges">
+                <img src="https://example.com/secure-payment-badge.png" alt="Secure Payment" class="trust-badge">
+                <img src="https://example.com/privacy-badge.png" alt="Privacy Protection" class="trust-badge">
+                <img src="https://example.com/shipping-badge.png" alt="Fast Shipping" class="trust-badge">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 JD Sports | All rights reserved</p>
+    </footer>
+</body>
+</html>
