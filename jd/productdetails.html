@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="d.css"> <!-- Updated to match new styles -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Product Details</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="payment.html">Checkout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <h2>Choose Your Perfect Size</h2>
+           
+            </div>
+
+            <form action="cart.html" method="POST" class="product-form">
+                <div class="form-group">
+                    <label for="size">Select Your Size:</label>
+                    <select id="size" name="size" required>
+                        <option value="6">UK 6</option>
+                        <option value="7">UK 7</option>
+                        <option value="8">UK 8</option>
+                        <option value="9">UK 9</option>
+                        <option value="10">UK 10</option>
+                    </select>
+                </div>
+
+                
+            </form>
+        </section>
+
+        <!-- Personal Details Section -->
+        <section class="personal-details">
+            <h3>Your Personal Details</h3>
+            
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="cta-btn">Proceed to Checkout</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Online Store. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
